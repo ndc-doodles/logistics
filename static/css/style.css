@@ -1,3 +1,14 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
 .btn-readmore {
   position: relative;
   display: inline-block;

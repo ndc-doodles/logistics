@@ -30,3 +30,36 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const left = document.getElementById("revealLeft");
+  const right = document.getElementById("revealRight");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        left.classList.remove("opacity-0", "-translate-x-24");
+        left.classList.add("opacity-100", "translate-x-0");
+
+        right.classList.remove("opacity-0", "translate-x-24");
+        right.classList.add("opacity-100", "translate-x-0");
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(document.querySelector('.reveal-container'));
+});
