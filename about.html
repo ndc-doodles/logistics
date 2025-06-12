@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Logistics Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Montserrat', 'sans-serif']
+        },
+        extend: {
+          colors: {
+            primary: '#84D5E6',
+            accent: '#F0C479',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body {
+    overflow-x: hidden;
+}
+
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div class="text-xl font-bold text-primary">LogisticsCo</div>
+      <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="services.html" class="hover:text-primary">Services</a>
+        <a href="about.html" class="text-primary font-semibold">About</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </nav>
+      <div class="hidden md:block">
+        <a href="#" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Get a Quote</a>
+      </div>
+      <button class="md:hidden text-2xl" id="menuToggle">☰</button>
+    </div>
+   
+
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+  <div class="p-6 space-y-8">
+    <a href="index.html" class="block text-gray-800 hover:text-primary">Home</a>
+    <a href="services.html" class="block text-gray-800 hover:text-primary">Services</a>
+    <a href="about.html" class="block text-gray-800 hover:text-primary">About</a>
+    <a href="contact.html" class="block text-primary font-semibold">Contact</a>
+    <a href="#" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Get a Quote</a>
+  </div>
+</div>
+
+
+  </header>
+
+<div class="w-full h-64 bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('./static/images/about.jpeg');"></div>
+
+  
+  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold">About Us</h1>
+    <p class="text-md md:text-md flex items-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>About</span>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+<section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center mt-10">
+  <div>
+    <img src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Logistics Image" class=" w-full h-auto object-cover">
+  </div>
+
+  <div>
+    <h1 class=" text-accent uppercase tracking-widest mb-2">About Us</h1>
+    <h2 class="text-3xl text-primary mb-4">About Our Logistics Company</h2>
+    <p class="text-gray-700 leading-relaxed">
+      At <strong>LogisticsCo</strong>, we specialize in providing efficient and reliable transportation, cargo handling, import/export solutions and customs support. 
+      With years of experience in the logistics industry, our goal is to simplify global shipping, whether it's FMCG, garments, spices or machinery.
+    </p>
+    <p class="text-gray-700 mt-4">
+      Our team ensures timely delivery, safe cargo management and personalized support, helping you move goods locally and globally with confidence.
+    </p>
+  </div>
+</section>
+<section class=" py-16 px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6">
+    
+    <div>
+      <h2 class="text-3xl font-semibold text-primary mb-4">#1 Place To Manage All Of Your Shipments</h2>
+      <p class="text-gray-700 mb-6">
+        Your trusted partner for cargo transport, import-export, refunds and insurance — delivering garments, spices, FMCG and machinery with care and expertise.
+      </p>
+      <div class="text-lg text-accent font-medium">
+        Call for any query! <br>
+        <span class="text-2xl font-bold text-black">+000000000</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-6 relative">
+      <div class="flex flex-col space-y-6">
+        <div class="bg-primary text-white p-6 rounded-lg text-center shadow">
+          <h3 class="text-3xl font-bold">2K+</h3>
+          <p class="text-sm mt-2">Happy Clients</p>
+        </div>
+        <div class="bg-accent text-white p-6 rounded-lg text-center shadow">
+          <h3 class="text-3xl font-bold">10K+</h3>
+          <p class="text-sm mt-2">Shipments Delivered</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <div class="bg-primary text-white p-6 rounded-lg text-center shadow">
+          <h3 class="text-3xl font-bold">12+</h3>
+          <p class="text-sm mt-2">Years of Experience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-100 py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-primary mb-4">Why Choose Us</h2>
+    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+      We stand out in the logistics sector by offering unmatched service, experience and commitment to customer satisfaction.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2 text-accent">Years of Experience</h3>
+        <p class="text-gray-600">Over a decade of hands-on expertise handling diverse logistics challenges worldwide.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2 text-accent">End-to-End Solutions</h3>
+        <p class="text-gray-600">From documentation to delivery, we cover cargo, import/export and customs clearance.</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2 text-accent">Secure Cargo Handling</h3>
+        <p class="text-gray-600">Your goods are insured and managed with industry-standard safety protocols.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<footer class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">LogisticsCo</h2>
+      <p>We simplify cargo, import/export, and logistics operations worldwide with efficiency and care.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Options</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i><a href="index.html">Home</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="about.html">About</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="services.html">Services</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Our Services</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo & Freight</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Import & Export</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Duty Drawback</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo Insurance</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Contact Info</h3>
+      <p>123 Logistic Street,<br>Kochi, Kerala, India</p>
+      <p class="mt-2">Phone: +91 98765 43210</p>
+      <p class="mt-2">Email: support@logisticsco.com</p>
+    </div>
+  </div>
+
+  <div class="border-t border-white mt-4 py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+    <p class="mb-2 md:mb-0">© 2025 LogisticsCo. All rights reserved.</p>
+    <p>Powered by <span class="font-semibold">N-ME </span></p>
+  </div>
+</footer>
+
+
+  <script src="./static/js/script.js"></script>
+   
+ 
+
+</body>
+</html>

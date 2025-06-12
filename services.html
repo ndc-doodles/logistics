@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Logistics Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="./static/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Montserrat', 'sans-serif']
+        },
+        extend: {
+          colors: {
+            primary: '#84D5E6',
+            accent: '#F0C479',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div class="text-xl font-bold text-primary">LogisticsCo</div>
+      <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="services.html" class="text-primary font-semibold">Services</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </nav>
+      <div class="hidden md:block">
+        <a href="#" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Get a Quote</a>
+      </div>
+      <button class="md:hidden text-2xl" id="menuToggle">☰</button>
+    </div>
+   
+
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out ">
+  <div class="p-6 space-y-4">
+    <a href="index.html" class="block text-gray-800 hover:text-primary">Home</a>
+    <a href="services.html" class="block text-gray-800 hover:text-primary">Services</a>
+    <a href="about.html" class="block text-gray-800 hover:text-primary">About</a>
+    <a href="contact.html" class="block text-primary font-semibold">Contact</a>
+    <a href="#" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Get a Quote</a>
+  </div>
+</div>
+
+
+  </header>
+
+<div class="w-full h-64 bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('./static/images/about.jpeg');"></div>
+
+  
+  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold">Services</h1>
+    <p class="text-md md:text-md flex items-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>Services</span>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services Section -->
+<section class="bg-gray-50 py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <p class="text-accent uppercase tracking-widest mb-2">What We Offer</p>
+    <h2 class="text-4xl font-semibold text-primary mb-12">Our Services</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <!-- Card 1 -->
+      <div class="bg-white  rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2017/01/29/15/21/container-2018508_640.jpg"alt="Import & Export" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Cargo Transport</h3>
+          <p class="text-gray-600 text-sm mb-4">We ensure safe and timely cargo transportation globally through an efficient logistics chain.</p>
+          <button onclick="openModal('modal1')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:scale-105 transition-transform duration-300">Read More</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white  rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2021/11/15/18/38/container-6799046_640.jpg" alt="Import & Export" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Import & Export Handling</h3>
+          <p class="text-gray-600 text-sm mb-4">We manage the complexities of import/export logistics and documentation effectively.</p>
+          <button onclick="openModal('modal1')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:scale-105 transition-transform duration-300">Read More</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white  rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2020/01/02/06/09/airport-4735067_640.jpg" alt="Duty Drawback" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Drawback & Refunds</h3>
+          <p class="text-gray-600 text-sm mb-4">We assist in recovering eligible customs duties and process refunds efficiently.</p>
+          <button onclick="openModal('modal1')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:scale-105 transition-transform duration-300">Read More</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white  rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/cargo_insurance.jpeg" alt="Cargo Insurance" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Cargo Insurance</h3>
+          <p class="text-gray-600 text-sm mb-4">We offer comprehensive cargo insurance services to secure your shipments end-to-end.</p>
+          <button onclick="openModal('modal1')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:scale-105 transition-transform duration-300">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded  w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Cargo Transport</h2>
+      <p class="text-gray-700 text-sm mb-4">Our cargo transport services ensure smooth, efficient, and safe delivery of your goods worldwide using a trusted logistics network.</p>
+      <button onclick="closeModal('modal1')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded  w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Import & Export Handling</h2>
+      <p class="text-gray-700 text-sm mb-4">We handle all import and export procedures including documentation, compliance, and coordination with international agents.</p>
+      <button onclick="closeModal('modal2')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded  w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Duty Drawback & Refund Settlement</h2>
+      <p class="text-gray-700 text-sm mb-4">We help clients recover eligible customs duties through duty drawback claims, processing them with precision and speed.</p>
+      <button onclick="closeModal('modal3')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded  w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Cargo Insurance</h2>
+      <p class="text-gray-700 text-sm mb-4">Protect your cargo against loss and damage during transportation with our reliable insurance options tailored for logistics businesses.</p>
+      <button onclick="closeModal('modal4')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+    document.getElementById(id).classList.remove('flex');
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">LogisticsCo</h2>
+      <p>We simplify cargo, import/export, and logistics operations worldwide with efficiency and care.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Options</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i><a href="index.html">Home</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="about.html">About</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="services.html">Services</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Our Services</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo & Freight</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Import & Export</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Duty Drawback</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo Insurance</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Contact Info</h3>
+      <p>123 Logistic Street,<br>Kochi, Kerala, India</p>
+      <p class="mt-2">Phone: +91 98765 43210</p>
+      <p class="mt-2">Email: support@logisticsco.com</p>
+    </div>
+  </div>
+
+  <div class="border-t border-white mt-4 py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+    <p class="mb-2 md:mb-0">© 2025 LogisticsCo. All rights reserved.</p>
+    <p>Powered by <span class="font-semibold">N-ME </span></p>
+  </div>
+</footer>
+
+
+  <script src="./static/js/script.js"></script>
+   
+ 
+
+</body>
+</html>

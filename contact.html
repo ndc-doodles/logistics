@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | Logistics Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Montserrat', 'sans-serif']
+        },
+        extend: {
+          colors: {
+            primary: '#84D5E6',
+            accent: '#F0C479',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+      <div class="text-xl font-bold text-primary">LogisticsCo</div>
+      <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
+        <a href="index.html" class="hover:text-primary">Home</a>
+        <a href="services.html" class="hover:text-primary">Services</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="contact.html" class="text-primary font-semibold">Contact</a>
+      </nav>
+      <div class="hidden md:block">
+        <a href="#" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Get a Quote</a>
+      </div>
+      <button class="md:hidden text-2xl" id="menuToggle">☰</button>
+    </div>
+   
+
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+  <div class="p-6 space-y-4">
+    <a href="index.html" class="block text-gray-800 hover:text-primary">Home</a>
+    <a href="services.html" class="block text-gray-800 hover:text-primary">Services</a>
+    <a href="about.html" class="block text-gray-800 hover:text-primary">About</a>
+    <a href="contact.html" class="block text-primary font-semibold">Contact</a>
+    <a href="#" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Get a Quote</a>
+  </div>
+</div>
+
+
+  </header>
+
+<div class="w-full h-64 bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('./static/images/contact2.jpeg');"></div>
+
+  
+  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold">Contact Us</h1>
+    <p class="text-md md:text-md flex items-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>Contact Us</span>
+    </p>
+  </div>
+</div>
+
+
+  
+
+
+
+
+<main class="max-w-7xl mx-auto px-4 pt-12 pb-20 space-y-12 mt-10">
+
+  <div>
+    <h1 class="text-3xl text-left text-gray-800">Get in Touch</h1>
+    <p class="text-left text-gray-600 mt-2">We’d love to hear from you. Whether it’s a question about services, pricing, or anything else, our team is ready to help.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+    <form id="contactForm" class="space-y-4  min-h-[500px] pt-2">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 p-3 rounded">
+      <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border border-gray-300 p-3 rounded">
+      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border border-gray-300 p-3 rounded"></textarea>
+      <button type="submit" class="bg-primary text-white px-6 py-2 rounded hover:brightness-110">Send Message</button>
+    </form>
+
+    <div class=" min-h-[500px] space-y-4 pt-2">
+      <h2 class="text-xl font-semibold text-primary">Contact Details</h2>
+      <p><strong>Address:</strong> 123 Logistic Street, Kochi, Kerala, India</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Email:</strong> support@logisticsco.com</p>
+      <p><strong>Working Hours:</strong> Mon – Sat: 9:00 AM – 6:00 PM</p>
+      <div class="mt-4 w-full">
+        <iframe class="w-full h-64" style="border:0;" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.023024584082!2d76.29988461531744!3d9.981635576331494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08720a9643db0f%3A0x8f3cf8f74ed7cb98!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1718187883886!5m2!1sen!2sin">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<footer class="bg-primary text-white">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">LogisticsCo</h2>
+      <p>We simplify cargo, import/export, and logistics operations worldwide with efficiency and care.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Options</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i><a href="index.html">Home</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="about.html">About</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="services.html">Services</a></li>
+        <li><i class="fas fa-angle-right mr-2"></i><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Our Services</h3>
+      <ul class="space-y-2">
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo & Freight</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Import & Export</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Duty Drawback</li>
+        <li><i class="fas fa-angle-right mr-2"></i>Cargo Insurance</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Contact Info</h3>
+      <p>123 Logistic Street,<br>Kochi, Kerala, India</p>
+      <p class="mt-2">Phone: +91 98765 43210</p>
+      <p class="mt-2">Email: support@logisticsco.com</p>
+    </div>
+  </div>
+
+  <div class="border-t border-white mt-4 py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+    <p class="mb-2 md:mb-0">© 2025 LogisticsCo. All rights reserved.</p>
+    <p>Powered by <span class="font-semibold">N-ME </span></p>
+  </div>
+</footer>
+
+
+  <script src="./static/js/script.js"></script>
+   
+ 
+
+</body>
+</html>
