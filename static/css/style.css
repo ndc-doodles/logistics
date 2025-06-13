@@ -52,3 +52,53 @@ html {
   transform: scale(1.05);
 }
 
+  #scrollContainer {
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  #scrollContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+
+
+  .zoom-in {
+    animation: zoomIn 5s ease forwards;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideLeft 1s ease-out forwards;
+  }
+
+  .slide-in-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideBottom 1s ease-out forwards;
+  }
+
+  @keyframes slideLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideBottom {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -45,47 +45,46 @@
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="relative text-gray-900 font-sans">
+   <div class="absolute inset-0 z-0">
+<img src="./static/images/contactbg.jpg" style="opacity: 0.03;" class="w-full h-full object-cover" />
+  </div>
 
 
-  <header class="bg-white shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
-  <div class="w-full px-4 md:px-48 py-6 flex items-center justify-between">
+<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  <div class="w-full px-4 md:px-48 py-6 flex items-center">
     
-    <a href="index.html">
-    <div class="text-xl font-bold text-primary">LogisticsCo</div>
-    </a>
-    
-    <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
-      <a href="index.html" class="hover:text-primary">Home</a>
-      <a href="about.html" class="text-primary font-semibold">About</a>
-      <a href="services.html" class="hover:text-primary">Services</a>
-      <a href="contact.html" class="hover:text-primary">Contact</a>
-    </nav>
+    <a href="index.html" class="text-xl font-bold text-[#005EB8]">LogisticsCo</a>
 
-    <div class="hidden md:block">
+<div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
+      <nav class="flex space-x-8">
+        <a href="index.html" class="hover:text-[#005EB8]">Home</a>
+        <a href="about.html" class="text-[#005EB8] font-semibold">About</a>
+        <a href="services.html" class="hover:text-[#005EB8]">Services</a>
+        <a href="contact.html" class="hover:text-[#005EB8]">Contact</a>
+      </nav>
       <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
     </div>
 
-    <button class="md:hidden text-3xl " id="menuToggle">☰</button>
+    <button class="md:hidden text-3xl ml-auto text-white" id="menuToggle">☰</button>
   </div>
 
   <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
     <div class="p-6 space-y-8 mt-[4rem]">
-      <a href="index.html" class="block text-gray-800 hover:text-primary">Home</a>
-      <a href="about.html" class="block text-primary font-semibold">About</a>
-      <a href="services.html" class="block text-gray-800 hover:text-primary">Services</a>
-      <a href="contact.html" class="block text-gray-800 hover:text-primary">Contact</a>
+      <a href="index.html" class="block text-gray-800 hover:text-[#005EB8]">Home</a>
+      <a href="about.html" class="block text-[#005EB8] font-semibold">About</a>
+      <a href="services.html" class="block text-gray-800 hover:text-[#005EB8]">Services</a>
+      <a href="contact.html" class="block text-gray-800 hover:text-[#005EB8]">Contact</a>
       <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
     </div>
   </div>
 </header>
 
-<div class="w-full h-64 bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+<div class="w-full min-h-[25rem] h-full bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
 
   <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('./static/images/about.jpeg');"></div>
 
-  
-  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center">
+  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center ">
     <h1 class="text-3xl md:text-4xl font-semibold">About Us</h1>
     <p class="text-md md:text-md flex items-center gap-2">
       <a href="/" class="hover:underline">Home</a>
@@ -93,7 +92,9 @@
       <span>About</span>
     </p>
   </div>
+
 </div>
+
 
 
 
@@ -106,8 +107,8 @@
   </div>
 
   <div class="reveal-right translate-x-[100px] transition-all duration-1000">
-    <h1 class=" text-accent uppercase tracking-widest mb-2">About Us</h1>
-    <h2 class="text-3xl text-primary mb-4">About Our Logistics Company</h2>
+    <h1 class=" text-[#031A4C] uppercase tracking-widest mb-2">About Us</h1>
+    <h2 class="text-3xl text-[#005EB8] mb-4">About Our Logistics Company</h2>
     <p class="text-gray-700 leading-relaxed">
       At <strong>LogisticsCo</strong>, we specialize in providing efficient and reliable transportation, cargo handling, import/export solutions and customs support. 
       With years of experience in the logistics industry, our goal is to simplify global shipping, whether it's FMCG, garments, spices or machinery.
@@ -121,11 +122,11 @@
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6 ">
     
     <div>
-      <h2 class="text-3xl font-semibold text-primary mb-4">#1 Place To Manage All Of Your Shipments</h2>
+      <h2 class="text-3xl font-semibold text-[#005EB8] mb-4">#1 Place To Manage All Of Your Shipments</h2>
       <p class="text-gray-700 mb-6">
         Your trusted partner for cargo transport, import-export, refunds and insurance — delivering garments, spices, FMCG and machinery with care and expertise.
       </p>
-      <div class="text-lg text-accent font-medium">
+      <div class="text-lg text-[#031A4C] font-medium">
         Call for any query! <br>
         <span class="text-2xl font-bold text-black">+000000000</span>
       </div>
@@ -133,7 +134,7 @@
 
     <div class="grid grid-cols-2 gap-6 relative">
       <div class="flex flex-col space-y-6">
-        <div class="bg-primary text-white p-6 rounded-lg text-center shadow">
+        <div class="bg-[#005EB8] text-white p-6 rounded-lg text-center shadow">
           <h3 class="text-3xl font-bold">2K+</h3>
           <p class="text-sm mt-2">Happy Clients</p>
         </div>
@@ -144,7 +145,7 @@
       </div>
 
       <div class="flex items-center justify-center">
-        <div class="bg-primary text-white p-6 rounded-lg text-center shadow">
+        <div class="bg-[#005EB8] text-white p-6 rounded-lg text-center shadow">
           <h3 class="text-3xl font-bold">12+</h3>
           <p class="text-sm mt-2">Years of Experience</p>
         </div>
@@ -153,24 +154,24 @@
   </div>
 </section>
 
-<section class="bg-gray-100 py-16 px-6 reveal-container">
+<section class="bg-[#005EB8]/10 py-16 px-6 reveal-container">
   <div class="max-w-7xl mx-auto text-center reveal-up opacity-0 translate-y-24 transition-all duration-1000">
-    <h2 class="text-3xl font-semibold text-primary mb-4">Why Choose Us</h2>
-    <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+    <h2 class="text-3xl font-semibold text-[#005EB8] mb-4">Why Choose Us</h2>
+    <p class="text-black/60 mb-10 max-w-2xl mx-auto">
       We stand out in the logistics sector by offering unmatched service, experience and commitment to customer satisfaction.
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
       <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-accent">Years of Experience</h3>
+        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">Years of Experience</h3>
         <p class="text-gray-600">Over a decade of hands-on expertise handling diverse logistics challenges worldwide.</p>
       </div>
       <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-accent">End-to-End Solutions</h3>
+        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">End-to-End Solutions</h3>
         <p class="text-gray-600">From documentation to delivery, we cover cargo, import/export and customs clearance.</p>
       </div>
       <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-accent">Secure Cargo Handling</h3>
+        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">Secure Cargo Handling</h3>
         <p class="text-gray-600">Your goods are insured and managed with industry-standard safety protocols.</p>
       </div>
     </div>
@@ -182,7 +183,7 @@
 
 
 
-<footer class="bg-primary text-white">
+<footer class="bg-[#005EB8] text-white">
   <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
     
     <div>
@@ -224,6 +225,9 @@
   </div>
 </footer>
 
+<a href="https://wa.me/918589961888" target="_blank" class="fixed bottom-4 right-4 z-50">
+  <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="Chat on WhatsApp" class="w-12 h-12 shadow-lg hover:scale-110 transition-transform duration-300" />
+</a>
 
   <script src="./static/js/script.js"></script>
    

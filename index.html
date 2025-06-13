@@ -16,6 +16,37 @@
 
 <link rel="stylesheet" href="./static/css/style.css">
 
+<style>
+  .slide-active {
+    animation: tvFade 1.5s ease-in-out forwards;
+    z-index: 10;
+  }
+
+  @keyframes tvFade {
+    0% {
+      opacity: 0;
+      transform: scale(1.2) rotateX(10deg);
+      filter: blur(10px) brightness(0.8);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.05) rotateX(0deg);
+      filter: blur(4px) brightness(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotateX(0);
+      filter: blur(0px) brightness(1);
+    }
+  }
+    #scrollContainer {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  #scrollContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+</style>
 
 
 
@@ -28,7 +59,7 @@
       },
         extend: {
           colors: {
-            primary: '#84D5E6',
+            primary: '#005EB8',
             accent: '#F0C479',
           }
         }
@@ -45,27 +76,28 @@
   </style>
 </head>
 
-<body class=" text-gray-900 font-sans">
+<body class="relative text-gray-900 font-sans">
+   <div class="absolute inset-0 z-0">
+<img src="./static/images/contactbg.jpg" style="opacity: 0.03;" class="w-full h-full object-cover" />
+  </div>
 
 
- <header class="bg-white shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
-  <div class="w-full px-4 md:px-48 py-6 flex items-center justify-between">
+<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  <div class="w-full px-4 md:px-48 py-6 flex items-center">
     
- <a href="index.html">
-    <div class="text-xl font-bold text-primary">LogisticsCo</div>
-    </a>    
-    <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
-      <a href="index.html" class="text-primary font-semibold">Home</a>
-      <a href="about.html" class="hover:text-primary">About</a>
-      <a href="services.html" class="hover:text-primary">Services</a>
-      <a href="contact.html" class="hover:text-primary">Contact</a>
-    </nav>
+    <a href="index.html" class="text-xl font-bold text-primary">LogisticsCo</a>
 
-    <div class="hidden md:block">
+<div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
+      <nav class="flex space-x-8">
+        <a href="index.html" class="text-primary font-semibold">Home</a>
+        <a href="about.html" class="hover:text-primary">About</a>
+        <a href="services.html" class="hover:text-primary">Services</a>
+        <a href="contact.html" class="hover:text-primary">Contact</a>
+      </nav>
       <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
     </div>
 
-    <button class="md:hidden text-3xl " id="menuToggle">☰</button>
+    <button class="md:hidden text-3xl ml-auto text-white" id="menuToggle">☰</button>
   </div>
 
   <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
@@ -81,105 +113,106 @@
 
 
 
-<div class="relative">
 
-  <section class="relative w-full h-[90vh] overflow-hidden">
-    <div class="w-full h-full relative">
-      <div class="absolute inset-0 slide opacity-100 transition-opacity duration-500" id="slide1">
-        <img src="./static/images/view-luxurious-cruise-ship.jpg" class="w-full h-full object-cover" />
+
+
+
+<div class="relative h-screen overflow-hidden">
+  <section class="relative w-full h-full">
+    <div id="slidesContainer" class="relative w-full h-full overflow-hidden">
+      <div class="absolute inset-0 slide" id="slide1">
+        <img src="./static/images/view-luxurious-cruise-ship.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white px-10 md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-6xl font-semibold mt-10 mb-6 leading-tight">
-            Ocean Freight<br />Across Continents
-          </h2>
-          <a href="#explore">
-  <button class="bg-[#84D5E6] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
-    Explore Now
-  </button>
-</a>
+        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white  md:px-44 z-10">
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Your Cargo,<br>Our Ocean Journey</h2>
+          <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
+            Reliable ocean freight solutions connecting major ports worldwide.
+          </p>
+          <a href="#explore" class="slide-in-bottom">
+            <button class="bg-[#005EB8] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
+              Explore Now
+            </button>
+          </a>
         </div>
       </div>
 
-      <div class="absolute inset-0 slide opacity-0 transition-opacity duration-500" id="slide2">
-        <img src="./static/images/vehicle-move.jpg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 slide hidden" id="slide2">
+        <img src="./static/images/vehicle-move.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white px-10 md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-6xl font-semibold mt-10 mb-6 leading-tight">
-            Land Transport<br />Across Borders
-          </h2>
-<a href="#explore">
-  <button class="bg-[#84D5E6] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
-    Explore Now
-  </button></a>
+        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white md:px-44 z-10">
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Truck Freight<br>Across Every Highway</h2>
+          <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
+            Delivering goods swiftly and safely through a vast road network.
+          </p>
+          <a href="#explore" class="slide-in-bottom">
+            <button class="bg-[#005EB8] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
+              Explore Now
+            </button>
+          </a>
         </div>
       </div>
 
-      <div class="absolute inset-0 slide opacity-0 transition-opacity duration-500" id="slide3">
-        <img src="./static/images/transport-logistics-concept.jpg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 slide hidden" id="slide3">
+        <img src="./static/images/transport-logistics-concept.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white px-10 md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-6xl font-semibold mt-10 mb-6 leading-tight">
-            Fast Air Freight<br />Safe & Swift Delivery
-          </h2>
-         <a href="#explore">
-  <button class="bg-[#84D5E6] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
-    Explore Now
-  </button></a>
+        <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white  md:px-44 z-10">
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Fast, Safe<br>Global Air Delivery</h2>
+          <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
+            Swift international shipping with guaranteed safety and speed through the skies.
+          </p>
+          <a href="#explore" class="slide-in-bottom">
+            <button class="bg-[#005EB8] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105">
+              Explore Now
+            </button>
+          </a>
         </div>
       </div>
     </div>
 
-    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl max-md:text-xl bg-black bg-opacity-40 p-2 z-20">&#10094;</button>
-    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl max-md:text-xl bg-black bg-opacity-40 p-2 z-20">&#10095;</button>
+    <!-- Dots -->
+    <div class="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-30">
+      <button class="dot w-3 h-3 rounded-full bg-white opacity-50" data-index="0"></button>
+      <button class="dot w-3 h-3 rounded-full bg-white opacity-50" data-index="1"></button>
+      <button class="dot w-3 h-3 rounded-full bg-white opacity-50" data-index="2"></button>
+    </div>
   </section>
-
-  <div class="max-md:hidden absolute -bottom-20 left-1/2 transform -translate-x-1/2 z-30 w-full max-w-6xl px-4 flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-6">
-    <div class="bg-[#F0C479] shadow-md rounded-lg p-6 md:w-1/3 text-center cursor-pointer">
-  <svg xmlns="http://www.w3.org/2000/svg" class="w-[3rem] justify-self-center mb-4" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M184,80h42.58A8,8,0,0,1,234,85l14,35" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="24" y1="144" x2="184" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="192" cy="192" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="80" cy="192" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="168" y1="192" x2="104" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M184,120h64v64a8,8,0,0,1-8,8H216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,192H32a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8H184V169.37" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-  <h3 class="text-xl  mb-2 text-gray-800">Timely Delivery</h3>
 </div>
 
-    <div class="bg-[#F0C479] shadow-md rounded-lg p-6 md:w-1/3 text-center cursor-pointer">
-  <svg xmlns="http://www.w3.org/2000/svg" class=" w-[3rem] justify-self-center mb-4" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><line x1="128" y1="129.09" x2="128" y2="231.97" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="32.7 76.92 128 129.08 223.3 76.92" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M219.84,182.84l-88,48.18a8,8,0,0,1-7.68,0l-88-48.18a8,8,0,0,1-4.16-7V80.18a8,8,0,0,1,4.16-7l88-48.18a8,8,0,0,1,7.68,0l88,48.18a8,8,0,0,1,4.16,7v95.64A8,8,0,0,1,219.84,182.84Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="81.56 48.31 176 100 176 152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-  <h3 class="text-xl  mb-2 text-gray-800">Cargo Insurance</h3>
-</div>
-    <div class="bg-[#F0C479] shadow-md rounded-lg p-6 md:w-1/3 text-center cursor-pointer">
-<svg xmlns="http://www.w3.org/2000/svg" class="  w-[3rem] justify-self-center mb-4" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M168,224H56a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8h80l40,40V216A8,8,0,0,1,168,224Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M80,64V40a8,8,0,0,1,8-8h80l40,40V184a8,8,0,0,1-8,8H176" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="88" y1="152" x2="136" y2="152" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="88" y1="184" x2="136" y2="184" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-  <h3 class="text-xl  mb-2 text-gray-800">Easy Customs</h3>
-</div>
-  </div>
 
-</div>
+
 
 
 <div id="explore"></div>
 
 
+<section class=" py-16 px-6 md:px-20 relative overflow-hidden">
 
-<section class="bg-white py-16 px-6 md:px-20 mt-32 max-md:mt-0">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal-container">
-    
-    <div class=" reveal-left opacity-0 translate-x-[-100px] transition-all duration-1000" >
-      <img src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=600" 
+  <div class="absolute top-0 right-0 w-full h-full z-0 pointer-events-none">
+    <img src="./static/images/bg3.png" 
+         alt="Background Decoration"
+         class="absolute top-[-20%] right-[-20%] w-[120%] rotate-45 object-cover" />
+  </div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start relative z-10">
+
+    <div class="order-1 md:order-none">
+      <img src="https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg?auto=compress&cs=tinysrgb&w=600"
            alt="Cargo Illustration"
-           class="w-full h-auto rounded-lg shadow-lg" />
+           class="w-full h-auto rounded-lg shadow-lg object-cover" />
     </div>
 
-    <div class=" reveal-right text-[#031A4C] opacity-0 translate-x-[100px] transition-all duration-1000" >
-      <p class="text-lg text-[#F0C479] font-semibold uppercase tracking-widest mb-2">Welcome to ___</p>
-      <h2 class="text-4xl md:text-5xl leading-tight mb-4 text-[#84D5E6]">
-        Delivering Beyond Borders
-      </h2>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        We specialize in reliable and efficient cargo movement by land, sea, and air. With years of experience in international logistics, we ensure seamless delivery of garments, spices, FMCG products, and heavy machinery across the globe.
+    <div class="flex flex-col justify-start md:mt-0 mt-6">
+      <p class="text-md md:text-lg text-white mb-6 mt-6 md:mt-56 leading-relaxed">
+        <span class="text-4xl md:text-6xl ">We</span>
+        specialize in reliable and efficient cargo movement by land, sea and air. With years of experience in international logistics, we ensure seamless delivery of garments, spices, FMCG products, and heavy machinery across the globe.
       </p>
       <a href="about.html">
-        <button class="bg-[#84D5E6] hover:bg-[#F0C479] text-white font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105 mt-8">
+        <button class="bg-[#F0C479] hover:bg-[#F0C479] text-[#005EB8] font-semibold px-6 py-3 rounded shadow-md transition-transform transform hover:scale-105 w-fit">
           Know Now
         </button>
       </a>
     </div>
-
+    
   </div>
 </section>
 
@@ -191,72 +224,84 @@
 
 
 
-<section class="bg-[#d9e9ec] py-16 px-6 md:px-20 text-center reveal-container">
-    <h1 class=" text-accent uppercase tracking-widest mb-2">What We Offer</h1>
+<section class="py-16 mt-16 relative">
+  <button id="scrollLeft" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full shadow-md z-10 hover:bg-[#F0C479]">
+    &#8592;
+  </button>
+  <button id="scrollRight" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-70 p-2 rounded-full shadow-md z-10 hover:bg-[#F0C479]">
+    &#8594;
+  </button>
 
-  <h2 class="text-4xl md:text-5xl  text-[#84D5E6] mb-10">Our Services</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20 reveal-down opacity-0 -translate-y-24 transition-all duration-1000">
-
-    <div class="bg-white p-6 rounded-lg shadow-md ">
-      <div class="text-[#F0C479] text-4xl mb-4">
-<i class="fi fi-rs-truck-arrow-right"></i>      </div>
-      <h3 class="text-xl font-semibold mb-2 text-[#031A4C]">Cargo Transport</h3>
-      <p class="text-gray-600 mb-4">We provide reliable cargo transport solutions across land, air, and sea.</p>
-      <a href="services.html">
-      <button class="text-[#F0C479] hover:underline">Detail View</button>
-      </a>
+<!-- Key improvements -->
+<div id="scrollContainer" class="flex bg-[#005EB8] overflow-x-auto scroll-smooth snap-x snap-mandatory w-full">
+    
+<div class="flex-shrink-0 w-full sm:w-full lg:w-[45%] h-[500px] snap-start transition-all duration-500">
+      <div class="flex flex-col sm:flex-row w-full h-full">
+        <div class="w-full sm:w-1/2 h-[250px] sm:h-full overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2017/01/29/15/21/container-2018508_640.jpg" alt="Import & Export" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="w-full sm:w-1/2 h-auto sm:h-full p-6 flex flex-col justify-center">
+          <h3 class="text-2xl font-bold text-[#F0C479] mb-2">Cargo Transport</h3>
+          <p class="text-gray-200 mb-4">We provide reliable cargo transport solutions across land, air, and sea.</p>
+          <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Detail View</a>
+        </div>
+      </div>
     </div>
 
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="text-[#F0C479] text-4xl mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-[3rem] justify-self-center mb-4" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M184,80h42.58A8,8,0,0,1,234,85l14,35" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="24" y1="144" x2="184" y2="144" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="192" cy="192" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="80" cy="192" r="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="168" y1="192" x2="104" y2="192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M184,120h64v64a8,8,0,0,1-8,8H216" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M56,192H32a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8H184V169.37" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+<div class="flex-shrink-0 w-full sm:w-full lg:w-[45%] h-[500px] snap-start transition-all duration-500">
+      <div class="flex flex-col sm:flex-row w-full h-full">
+        <div class="w-full sm:w-1/2 h-[250px] sm:h-full overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2021/11/15/18/38/container-6799046_640.jpg" alt="Import & Export" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="w-full sm:w-1/2 h-auto sm:h-full p-6 flex flex-col justify-center">
+          <h3 class="text-2xl font-bold text-[#F0C479] mb-2">Import & Export</h3>
+          <p class="text-gray-200 mb-4">Expert services for smooth global import and export operations.</p>
+          <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Detail View</a>
+        </div>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-[#031A4C]">Import & Export Handling</h3>
-      <p class="text-gray-600 mb-4">Expert services for smooth global import and export operations.</p>
-        <a href="services.html">
-
-      <button class="text-[#F0C479] hover:underline">Detail View</button>
-        </a>
-
     </div>
 
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="text-[#F0C479] text-4xl mb-4">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-[3rem] justify-self-center mb-4" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><line x1="232" y1="160" x2="24" y2="160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M24,160,46.49,70.06A8,8,0,0,1,54.25,64h147.5a8,8,0,0,1,7.76,6.06L232,160v32a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="72" y1="96" x2="88" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="120" y1="96" x2="136" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="168" y1="96" x2="184" y2="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="72" y1="128" x2="88" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="120" y1="128" x2="136" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><line x1="168" y1="128" x2="184" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M72,64V40a8,8,0,0,1,8-8h40a8,8,0,0,1,8,8V64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+<div class="flex-shrink-0 w-full sm:w-full lg:w-[45%] h-[500px] snap-start transition-all duration-500">
+      <div class="flex flex-col sm:flex-row w-full h-full">
+        <div class="w-full sm:w-1/2 h-[250px] sm:h-full overflow-hidden">
+          <img src="https://cdn.pixabay.com/photo/2020/01/02/06/09/airport-4735067_640.jpg" alt="Duty Drawback" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="w-full sm:w-1/2 h-auto sm:h-full p-6 flex flex-col justify-center">
+          <h3 class="text-2xl font-bold text-[#F0C479] mb-2">Drawback & Refunds</h3>
+          <p class="text-gray-200 mb-4">Hassle-free duty drawback and refund settlement services to optimize your export returns.</p>
+          <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Detail View</a>
+        </div>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-[#031A4C]">Drawback & Refunds</h3>
-      <p class="text-gray-600 mb-4">We assist in claiming customs duty drawbacks and tax refunds efficiently.</p>
-            <a href="services.html">
-
-      <button class="text-[#F0C479] hover:underline">Detail View</button>
-            </a>
-
     </div>
 
-    <div class="bg-white p-6 rounded-lg shadow-md">
-      <div class="text-[#F0C479] text-4xl mb-4">
-        <i class="fi fi-rr-shield-trust"></i>
+<div class="flex-shrink-0 w-full sm:w-full lg:w-[45%] h-[500px] snap-start transition-all duration-500">
+      <div class="flex flex-col sm:flex-row w-full h-full">
+        <div class="w-full sm:w-1/2 h-[250px] sm:h-full overflow-hidden">
+          <img src="./static/images/cargo_insurance.jpeg" alt="Cargo Insurance" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="w-full sm:w-1/2 h-auto sm:h-full p-6 flex flex-col justify-center">
+          <h3 class="text-2xl font-bold text-[#F0C479] mb-2">Cargo Insurance</h3>
+          <p class="text-gray-200 mb-4">Secure your shipments against loss or damage with our reliable cargo insurance solutions.</p>
+          <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Detail View</a>
+        </div>
       </div>
-      <h3 class="text-xl font-semibold mb-2 text-[#031A4C]">Cargo Insurance</h3>
-      <p class="text-gray-600 mb-4">Protect your shipment with our comprehensive cargo insurance services.</p>
-            <a href="services.html">
-
-      <button class="text-[#F0C479] hover:underline">Detail View</button>
-            </a>
-
     </div>
 
   </div>
 </section>
+
+
+
+
 
 
 <section class=" py-16 px-6 md:px-20">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center reveal-container">
     
     <div class="reveal-left translate-x-24 transition-all duration-1000">
-        <h1 class=" text-accent uppercase tracking-widest mb-2">Built on Trust</h1>
+        <!-- <h1 class=" text-accent uppercase tracking-widest mb-2 bg-[#005EB8] w-44">Built on Trust</h1> -->
 
-      <h2 class="text-4xl md:text-5xl  text-[#84D5E6] mb-4">25+ Years of Trusted Experience</h2>
+      <h2 class="text-4xl md:text-5xl  text-[#005EB8] mb-4">25+ Years of Trusted Experience</h2>
       <p class="text-gray-600 text-lg leading-relaxed mb-6">
         With decades of expertise in global logistics, we handle a wide range of products with utmost care and efficiency.
       </p>
@@ -274,12 +319,18 @@
   </div>
 </section>
 
-<section class="bg-[#F0C479] text-white py-16 px-6 md:px-20 text-center">
-  <h2 class="text-4xl md:text-5xl mb-6">Ready to Move Your Business Forward?</h2>
-  <p class="text-lg mb-8">Get in touch with our logistics team today and let’s start your seamless shipping journey.</p>
-  <a href="contact.html" class="bg-[#84D5E6] hover:bg-[#F0C479] text-white px-8 py-4 rounded shadow-md text-lg font-semibold  transition-transform transform hover:scale-105">
-    Contact Us
-  </a>
+<section class="relative text-white py-28 px-6 md:px-20 text-center bg-fixed bg-cover bg-center mt-12" 
+         style="background-image: url('./static/images/paralax.jpg');">
+
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <div class="relative z-10">
+    <h2 class="text-4xl md:text-5xl mb-6 font-bold">Ready to Move Your Business Forward?</h2>
+    <p class="text-lg mb-8">Get in touch with our logistics team today and let’s start your seamless shipping journey.</p>
+    <a href="contact.html" class="bg-[#005EB8] hover:bg-[#F0C479] text-white px-8 py-4 rounded shadow-md text-lg font-semibold transition-transform transform hover:scale-105">
+      Contact Us
+    </a>
+  </div>
 </section>
 
 
@@ -291,7 +342,8 @@
 
 
 
-<footer class="bg-primary text-white">2
+
+<footer class="bg-primary text-white">
   <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
     
     <div>
@@ -333,8 +385,11 @@
   </div>
 </footer>
 
+<a href="https://wa.me/918589961888" target="_blank" class="fixed bottom-4 right-4 z-50">
+  <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="Chat on WhatsApp" class="w-12 h-12 shadow-lg hover:scale-110 transition-transform duration-300" />
+</a>
 
-  <script src="./static/js/script.js"></script>
+ 
    
  
 <script>
@@ -368,32 +423,160 @@
   });
 </script>
 
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".dot");
+    let current = 0;
+    let loopCount = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.classList.add("slide-active", "opacity-100");
+          slide.classList.remove("opacity-0");
+        } else {
+          slide.classList.remove("slide-active", "opacity-100");
+          slide.classList.add("opacity-0");
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.remove("scale-150", "opacity-100");
+        dot.classList.add("scale-100", "opacity-50");
+        if (i === index) {
+          dot.classList.add("scale-150", "opacity-100");
+          dot.classList.remove("opacity-50");
+        }
+      });
+
+      current = index;
+    }
+
+    showSlide(current);
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const index = parseInt(dot.getAttribute("data-index"));
+        showSlide(index);
+      });
+    });
+
+    // Auto slide every 3 seconds
+    const interval = setInterval(() => {
+      const next = (current + 1) % slides.length;
+      showSlide(next);
+
+      if (next === 0) {
+        loopCount++;
+      }
+
+      // Scroll down after 1 full loop
+      if (loopCount === 1 && next === 0) {
+        clearInterval(interval);  // stop auto sliding
+        setTimeout(() => {
+          document.querySelector("section").nextElementSibling?.scrollIntoView({
+            behavior: "smooth"
+          });
+        }, 1000);
+      }
+
+    }, 3000);  // Faster slide transition
+  });
+</script> -->
+
+
+<script>
+  const scrollContainer = document.getElementById('scrollContainer');
+  const scrollLeftBtn = document.getElementById('scrollLeft');
+  const scrollRightBtn = document.getElementById('scrollRight');
+
+  function getScrollAmount() {
+    return scrollContainer.clientWidth; // Snap exactly one card
+  }
+
+  scrollLeftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+  });
+
+  scrollRightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+  });
+
+  // Auto scroll for mobile only
+  if (window.innerWidth < 768) {
+    setInterval(() => {
+      const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+      if (scrollContainer.scrollLeft >= maxScroll - 5) {
+        scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        scrollContainer.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
+      }
+    }, 4000); // Change every 4s
+  }
+</script>
+
+
 <script>
   const slides = document.querySelectorAll('.slide');
-  let current = 0;
-  const total = slides.length;
+  const dots = document.querySelectorAll('.dot');
+  let currentIndex = 0;
+  let interval;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.style.opacity = i === index ? '1' : '0';
+      slide.classList.add('hidden');
+      slide.querySelector('img').classList.remove('zoom-in');
+
+      const h2 = slide.querySelector('h2');
+      const p = slide.querySelector('p');
+      const btn = slide.querySelector('a');
+
+      h2 && h2.classList.remove('slide-in-left');
+      p && p.classList.remove('slide-in-bottom');
+      btn && btn.classList.remove('slide-in-bottom');
+
+      // Reset dot styles
+      dots[i].classList.remove('opacity-100', 'scale-150');
+      dots[i].classList.add('opacity-50', 'scale-100');
     });
+
+    const activeSlide = slides[index];
+    activeSlide.classList.remove('hidden');
+    activeSlide.querySelector('img').classList.add('zoom-in');
+
+    activeSlide.querySelector('h2').classList.add('slide-in-left');
+    activeSlide.querySelector('p').classList.add('slide-in-bottom');
+    activeSlide.querySelector('a').classList.add('slide-in-bottom');
+
+    // Set active dot style
+    dots[index].classList.add('opacity-100', 'scale-150');
+    dots[index].classList.remove('opacity-50', 'scale-100');
+
+    currentIndex = index;
   }
 
-  function nextSlide() {
-    current = (current + 1) % total;
-    showSlide(current);
+  // Dot click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = parseInt(dot.dataset.index);
+      showSlide(index);
+    });
+  });
+
+  // Auto slide
+  function startSlider() {
+    interval = setInterval(() => {
+      let nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    }, 5000);
   }
 
-  function prevSlide() {
-    current = (current - 1 + total) % total;
-    showSlide(current);
-  }
-
-  document.getElementById('next').addEventListener('click', nextSlide);
-  document.getElementById('prev').addEventListener('click', prevSlide);
-
-  setInterval(nextSlide, 5000); 
+  startSlider();
+  showSlide(0);
 </script>
 
+
+ <script src="./static/js/script.js"></script>
 </body>
 </html>

@@ -45,39 +45,43 @@
   </style>
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="relative text-gray-900 font-sans">
+   <div class="absolute inset-0 z-0">
+<img src="./static/images/contactbg.jpg" style="opacity: 0.03;" class="w-full h-full object-cover" />
+  </div>
 
- <header class="bg-white shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
-  <div class="w-full px-4 md:px-48 py-6 flex items-center justify-between">
+<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  <div class="w-full px-4 md:px-48 py-6 flex items-center">
     
- <a href="index.html">
-    <div class="text-xl font-bold text-primary">LogisticsCo</div>
-    </a>    
-    <nav class="hidden md:flex space-x-8 text-gray-800 font-medium">
-      <a href="index.html" class="hover:text-primary">Home</a>
-      <a href="about.html" class="hover:text-primary">About</a>
-      <a href="services.html" class="text-primary font-semibold">Services</a>
-      <a href="contact.html" class="hover:text-primary">Contact</a>
-    </nav>
+    <a href="index.html" class="text-xl font-bold text-[#005EB8]">LogisticsCo</a>
 
-    <div class="hidden md:block">
+<div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
+      <nav class="flex space-x-8">
+        <a href="index.html" class="hover:text-[#005EB8]">Home</a>
+        <a href="about.html" class="hover:text-[#005EB8]">About</a>
+        <a href="services.html" class="text-[#005EB8] font-semibold">Services</a>
+        <a href="contact.html" class="hover:text-[#005EB8]">Contact</a>
+      </nav>
       <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
     </div>
 
-    <button class="md:hidden text-3xl " id="menuToggle">☰</button>
+    <button class="md:hidden text-3xl ml-auto text-white" id="menuToggle">☰</button>
   </div>
 
   <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
     <div class="p-6 space-y-8 mt-[4rem]">
-      <a href="index.html" class="block hover:text-primary">Home</a>
-      <a href="about.html" class="block text-gray-800 hover:text-primary">About</a>
-      <a href="services.html" class="block text-primary font-semibold">Services</a>
-      <a href="contact.html" class="block text-gray-800 hover:text-primary">Contact</a>
+      <a href="index.html" class="block text-gray-800 hover:text-[#005EB8]">Home</a>
+      <a href="about.html" class="block text-gray-800 hover:text-[#005EB8]">About</a>
+      <a href="services.html" class="block text-[#005EB8] font-semibold">Services</a>
+      <a href="contact.html" class="block text-gray-800 hover:text-[#005EB8]">Contact</a>
       <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
     </div>
   </div>
 </header>
-<div class="w-full h-64 bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+
+
+
+<div class="w-full min-h-[25rem] bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
 
   <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('./static/images/about.jpeg');"></div>
 
@@ -104,8 +108,8 @@
 
 <section class="bg-gray-50 py-16 px-6">
   <div class="max-w-7xl mx-auto text-center">
-    <p class="text-accent uppercase tracking-widest mb-2">What We Offer</p>
-    <h2 class="text-4xl font-semibold text-primary mb-12">Our Services</h2>
+    <p class="text-[#031A4C] uppercase tracking-widest mb-2">What We Offer</p>
+    <h2 class="text-4xl font-semibold text-[#005EB8] mb-12">Our Services</h2>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
       <div class="bg-white  rounded-lg overflow-hidden group">
@@ -158,7 +162,7 @@
     <div class="bg-white p-8 rounded  w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Cargo Transport</h2>
       <p class="text-gray-700 text-sm mb-4">Our cargo transport services ensure smooth, efficient, and safe delivery of your goods worldwide using a trusted logistics network.</p>
-      <button onclick="closeModal('modal1')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+      <button onclick="closeModal('modal1')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
     </div>
   </div>
 
@@ -166,7 +170,7 @@
     <div class="bg-white p-8 rounded  w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Import & Export Handling</h2>
       <p class="text-gray-700 text-sm mb-4">We handle all import and export procedures including documentation, compliance, and coordination with international agents.</p>
-      <button onclick="closeModal('modal2')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+      <button onclick="closeModal('modal2')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
     </div>
   </div>
 
@@ -174,7 +178,7 @@
     <div class="bg-white p-8 rounded  w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Duty Drawback & Refund Settlement</h2>
       <p class="text-gray-700 text-sm mb-4">We help clients recover eligible customs duties through duty drawback claims, processing them with precision and speed.</p>
-      <button onclick="closeModal('modal3')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+      <button onclick="closeModal('modal3')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
     </div>
   </div>
 
@@ -182,7 +186,7 @@
     <div class="bg-white p-8 rounded  w-full max-w-md">
       <h2 class="text-2xl font-bold mb-4">Cargo Insurance</h2>
       <p class="text-gray-700 text-sm mb-4">Protect your cargo against loss and damage during transportation with our reliable insurance options tailored for logistics businesses.</p>
-      <button onclick="closeModal('modal4')" class="mt-4 bg-primary text-white px-4 py-2 rounded">Close</button>
+      <button onclick="closeModal('modal4')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
     </div>
   </div>
 </section>
@@ -201,7 +205,7 @@
 
 
 
-<footer class="bg-primary text-white">
+<footer class="bg-[#005EB8] text-white">
   <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
     
     <div>
@@ -244,7 +248,6 @@
 </footer>
 
 
-  <script src="./static/js/script.js"></script>
    
  
 <script>
@@ -257,5 +260,13 @@
     document.getElementById(id).classList.remove('flex');
   }
 </script>
+
+<a href="https://wa.me/918589961888" target="_blank" class="fixed bottom-4 right-4 z-50">
+  <img src="https://img.icons8.com/fluency/48/000000/whatsapp.png" alt="Chat on WhatsApp" class="w-12 h-12 shadow-lg hover:scale-110 transition-transform duration-300" />
+</a>
+
+
+
+  <script src="./static/js/script.js"></script>
 </body>
 </html>
