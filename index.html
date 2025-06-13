@@ -80,8 +80,19 @@
 </head>
 
 <body class="relative text-gray-900 font-sans">
-   <div class="absolute inset-0 z-0">
-<img src="./static/images/contactbg.jpg" style="opacity: 0.05;" class="w-full h-full object-cover" />
+  <!-- Background Image Wrapper -->
+  <div class="absolute inset-0 z-0">
+    <!-- Background Image -->
+    <img 
+      src="./static/images/contactbg.jpg"
+      class="w-full h-full object-cover opacity-5 hidden md:block" 
+      alt="Background"
+    />
+
+    <!-- Repeating Pattern for Mobile -->
+    <div class="block md:hidden w-full h-full bg-repeat opacity-10" 
+         style="background-image: url('./static/images/contactbg.jpg'); background-size: 300px 300px;">
+    </div>
   </div>
 
 
@@ -158,7 +169,7 @@
         <img src="./static/images/transport-logistics-concept.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white  md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-[5.5rem] font-bold leading-none slide-in-left mb-10">Fast, Safe<br>Global Air Delivery</h2>
+          <h2 class="text-[3rem] md:text-[5.5rem] font-bold leading-none slide-in-left mb-10">Fast,<br> Safe Global Air <br>Delivery</h2>
           <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
             Swift international shipping with guaranteed safety and speed through the skies.
           </p>
@@ -193,7 +204,7 @@
   <div class="absolute top-0 right-0 w-full h-full z-0 pointer-events-none">
     <img src="./static/images/bg3.png" 
          alt="Background Decoration"
-         class="absolute top-[-27%] right-[-20%] w-[120%] rotate-45 object-cover" />
+         class="absolute top-[-33%] right-[-20%] w-[120%] rotate-45 object-cover" />
   </div>
 
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start relative z-10">
