@@ -2,18 +2,27 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById('mainHeader');
   const navWrapper = document.querySelector('.nav-wrapper');
+  const toggleBtn = document.getElementById('menuToggle'); // Toggle button
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.remove('bg-transparent');
       header.classList.add('bg-white', 'shadow');
+
       navWrapper.classList.remove('text-white');
       navWrapper.classList.add('text-gray-800');
+
+      toggleBtn.classList.remove('text-white');
+      toggleBtn.classList.add('text-black'); // 👈 Make toggle button black
     } else {
       header.classList.add('bg-transparent');
       header.classList.remove('bg-white', 'shadow');
+
       navWrapper.classList.add('text-white');
       navWrapper.classList.remove('text-gray-800');
+
+      toggleBtn.classList.add('text-white');
+      toggleBtn.classList.remove('text-black'); // 👈 Restore white on top
     }
   });
 });
