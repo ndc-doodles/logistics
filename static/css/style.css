@@ -4,9 +4,15 @@ html {
 }
 
 
+/* 
+body {
+  font-family: 'Space Grotesk', sans-serif;
+} */
 
 
-
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
 
 
 .btn-readmore {

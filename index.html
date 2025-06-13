@@ -10,9 +10,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="./static/css/style.css">
 
@@ -54,8 +55,11 @@
   <script>
     tailwind.config = {
       theme: {
-        fontFamily: {
-        raleway: ['Raleway', 'sans-serif'],
+      //   fontFamily: {
+      //   raleway: ['Raleway', 'sans-serif'],
+      // },
+      fontFamily: {
+        rajdhani: ['"Rajdhani"', 'sans-serif'],
       },
         extend: {
           colors: {
@@ -78,7 +82,7 @@
 
 <body class="relative text-gray-900 font-sans">
    <div class="absolute inset-0 z-0">
-<img src="./static/images/contactbg.jpg" style="opacity: 0.04;" class="w-full h-full object-cover" />
+<img src="./static/images/contactbg.jpg" style="opacity: 0.05;" class="w-full h-full object-cover" />
   </div>
 
 
@@ -92,7 +96,7 @@
         <a href="index.html" class="text-primary font-semibold">Home</a>
         <a href="about.html" class="hover:text-primary">About</a>
         <a href="services.html" class="hover:text-primary">Services</a>
-        <a href="contact.html" class="hover:text-primary">Contact</a>
+        <!-- <a href="contact.html" class="hover:text-primary">Contact</a> -->
       </nav>
       <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
     </div>
@@ -105,7 +109,6 @@
       <a href="index.html" class="block text-primary font-semibold">Home</a>
       <a href="about.html" class="block text-gray-800 hover:text-primary">About</a>
       <a href="services.html" class="block text-gray-800 hover:text-primary">Services</a>
-      <a href="contact.html" class="block text-gray-800 hover:text-primary">Contact</a>
       <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
     </div>
   </div>
@@ -124,7 +127,7 @@
         <img src="./static/images/view-luxurious-cruise-ship.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white  md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Your Cargo,<br>Our Ocean Journey</h2>
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-none slide-in-left mb-10">Your Cargo,<br>Our Ocean Journey</h2>
           <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
             Reliable ocean freight solutions connecting major ports worldwide.
           </p>
@@ -140,7 +143,7 @@
         <img src="./static/images/vehicle-move.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Truck Freight<br>Across Every Highway</h2>
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-none slide-in-left mb-10">Truck Freight<br>Across Every Highway</h2>
           <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
             Delivering goods swiftly and safely through a vast road network.
           </p>
@@ -156,7 +159,7 @@
         <img src="./static/images/transport-logistics-concept.jpg" class="w-full h-full object-cover zoom-in" />
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="absolute left-10 top-1/2 transform -translate-y-1/2 text-white  md:px-44 z-10">
-          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-tight slide-in-left">Fast, Safe<br>Global Air Delivery</h2>
+          <h2 class="text-[3rem] md:text-[5rem] font-bold leading-none slide-in-left mb-10">Fast, Safe<br>Global Air Delivery</h2>
           <p class="text-lg md:text-xl text-white mb-6 slide-in-bottom">
             Swift international shipping with guaranteed safety and speed through the skies.
           </p>
@@ -232,8 +235,8 @@
           <img src="https://cdn.pixabay.com/photo/2017/01/29/15/21/container-2018508_640.jpg" alt="Cargo Transport" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
           <div class="absolute inset-0 bg-black bg-opacity-40 translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
         </div>
-        <div class="w-full sm:w-1/2 p-6 flex flex-col justify-center">
-          <h3 class="text-2xl font-bold text-white mb-2">Worldwide Coverage</h3>
+        <div class="w-full sm:w-1/2 p-6 flex flex-col justify-center px-10">
+          <h3 class="text-2xl font-bold text-white mb-6">Worldwide Coverage</h3>
           <p class="text-gray-200 mb-4">We offer end-to-end logistics solutions across the globe by land, air, and sea.</p>
           <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Learn More</a>
         </div>
@@ -246,8 +249,8 @@
           <img src="https://cdn.pixabay.com/photo/2021/11/15/18/38/container-6799046_640.jpg" alt="Import & Export" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-300">
           <div class="absolute inset-0 bg-black bg-opacity-40 translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></div>
         </div>
-        <div class="w-full sm:w-1/2 p-6 flex flex-col justify-center">
-          <h3 class="text-2xl font-bold text-white mb-2">Refund & Duty Drawback</h3>
+        <div class="w-full sm:w-1/2 p-6 flex flex-col justify-center px-10">
+          <h3 class="text-2xl font-bold text-white mb-6">Refund & Duty Drawback</h3>
           <p class="text-gray-200 mb-4">We handle complex refund settlements and duty drawback processes with ease and accuracy.</p>
           <a href="services.html" class="text-[#F0C479] font-medium hover:underline">Learn More</a>
         </div>
