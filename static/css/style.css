@@ -19,7 +19,7 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
-
+/* 
 .btn-readmore {
   position: relative;
   display: inline-block;
@@ -61,7 +61,7 @@ p {
 .btn-readmore:hover {
   color: white;
   transform: scale(1.05);
-}
+} */
 
   #scrollContainer {
     overflow-x: scroll;
