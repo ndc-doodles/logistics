@@ -2,7 +2,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.getElementById('mainHeader');
   const navWrapper = document.querySelector('.nav-wrapper');
-  const toggleBtn = document.getElementById('menuToggle'); // Toggle button
+  const toggleBtn = document.getElementById('menuToggle');
+  const logoImage = document.getElementById('logoImage'); // Get logo img element
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -13,7 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
       navWrapper.classList.add('text-gray-800');
 
       toggleBtn.classList.remove('text-white');
-      toggleBtn.classList.add('text-black'); // 👈 Make toggle button black
+      toggleBtn.classList.add('text-black');
+
+      logoImage.src = "./static/images/logo2.png"; // 👈 Switch to second logo
     } else {
       header.classList.add('bg-transparent');
       header.classList.remove('bg-white', 'shadow');
@@ -22,10 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
       navWrapper.classList.remove('text-gray-800');
 
       toggleBtn.classList.add('text-white');
-      toggleBtn.classList.remove('text-black'); // 👈 Restore white on top
+      toggleBtn.classList.remove('text-black');
+
+      logoImage.src = "./static/images/logo1.png"; // 👈 Restore original logo
     }
   });
 });
+
 
 
 
