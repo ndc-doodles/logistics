@@ -121,13 +121,18 @@
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start max-md:gap-0">
-    <form id="contactForm" class="space-y-4  min-h-[500px] pt-2 max-md:mb-[-4rem]">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 p-3 rounded">
-      <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border border-gray-300 p-3 rounded">
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border border-gray-300 p-3 rounded"></textarea>
-      <button type="submit" class="bg-[#005EB8] text-white px-6 py-2 rounded hover:brightness-110">Send Message</button>
-    </form>
+    <form action="https://formsubmit.co/info@evslogistics.in" method="POST" class="relative z-10 space-y-4 min-h-[500px] pt-2 max-md:mb-[-4rem]">
+<input type="hidden" name="_next" value="contact.html">
+  
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded">
+  <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 p-3 rounded">
+  <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border border-gray-300 p-3 rounded">
+  <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border border-gray-300 p-3 rounded"></textarea>
+  <button type="submit" class="bg-[#005EB8] text-white px-6 py-2 rounded hover:brightness-110">Send Message</button>
+</form>
+
 
     <div class=" min-h-[500px] space-y-4 pt-2 ">
       <h2 class="text-xl font-semibold text-[#005EB8]">Contact Details</h2>
@@ -144,7 +149,8 @@
   <span class="inline-block w-20"></span> +91 8589961888<br>
   <span class="inline-block w-20"></span> +91 4842320046
 </p>
-
+<p>
+  <strong class="inline-block w-20">Email:</strong> info@cybexel.com</p>
 </div>
 
       <!-- <p><strong>Email:</strong> support@EVS.com</p> -->
@@ -228,7 +234,7 @@
   <span class="inline-block min-w-[45px]"></span> +91 4842320046
 </p>
 
-      <!-- <p class="mt-2">Email: support@EVS.com</p> -->
+      <p class="mt-2">Email: info@cybexel.com</p>
     </div>
   </div>
 
