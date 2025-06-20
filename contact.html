@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <title>EVS</title>
+  <link rel="icon" type="image/png" href="/static/images/logo11.png" />
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./static/css/style.css">
+
+
+
+
+
+    <script>
+    tailwind.config = {
+      theme: {
+     
+      fontFamily: {
+        rajdhani: ['"Rajdhani"', 'sans-serif'],
+      },
+        extend: {
+          colors: {
+            primary: '#005EB8',
+            accent: '#F0C479',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body {
+    overflow-x: hidden;
+}
+ .slide {
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+
+<body class="relative text-gray-900 font-sans">
+ 
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="./static/images/contactbg.jpg"
+      class="w-full h-full object-cover opacity-[0.03] max-md:hidden block" 
+      alt="Background"
+    />
+
+    <!-- <div class="block md:hidden w-full h-full bg-repeat opacity-15" 
+         style="background-image: url('./static/images/contactbg.jpg'); background-size: 400px 400px;">
+    </div> -->
+  </div>
+<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  <div class="w-full px-4 md:px-48 py-6 flex items-center">
+    
+<a href="index.html">
+  <img src="./static/images/logo1.png" alt="EVS Logo" class="h-12 w-auto">
+</a>
+<div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
+      <nav class="flex space-x-8">
+        <a href="index.html" class="hover:text-[#005EB8]">Home</a>
+        <a href="about.html" class="hover:text-[#005EB8]">About</a>
+        <a href="services.html" class="hover:text-[#005EB8]">Services</a>
+        <!-- <a href="contact.html" class="text-[#005EB8] font-semibold">Contact</a> -->
+      </nav>
+      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
+    </div>
+
+    <button class="md:hidden text-3xl ml-auto text-white" id="menuToggle">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+    <div class="p-6 space-y-8 mt-[4rem]">
+      <a href="index.html" class="block text-gray-800 hover:text-[#005EB8]">Home</a>
+      <a href="about.html" class="block text-gray-800 hover:text-[#005EB8]">About</a>
+      <a href="services.html" class="block text-gray-800 hover:text-[#005EB8]">Services</a>
+      <!-- <a href="contact.html" class="block text-[#005EB8] font-semibold">Contact</a> -->
+      <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
+    </div>
+  </div>
+</header>
+
+<div class="w-full min-h-[25rem] h-[25rem] bg-black relative text-white px-[9.5rem] max-md:px-6 flex items-center justify-center">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('./static/images/contact1.jpg');"></div>
+
+  <div class="relative z-10 text-center ">
+    <h1 class="text-3xl md:text-4xl font-semibold">Contact Us</h1>
+    <p class="text-md md:text-md flex items-center justify-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>Contact Us</span>
+    </p>
+  </div>
+
+</div>
+
+
+
+  
+
+
+
+
+<main class="max-w-7xl mx-auto px-4 pt-12 pb-20 space-y-12 mt-10">
+
+  <div>
+    <h1 class="text-3xl text-left text-[#005EB8] font-semibold">Get in Touch</h1>
+    <p class="text-left text-gray-600 mt-2">We’d love to hear from you. Whether it’s a question about services, pricing, or anything else, our team is ready to help.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start max-md:gap-0">
+     <form action="https://formsubmit.co/info@evslogistics.in" method="POST" class="relative z-10 space-y-4 min-h-[500px] pt-2 max-md:mb-[-4rem]">
+<input type="hidden" name="_subject" value="New Contact Form Submission!">
+  
+  <input type="hidden" name="_captcha" value="false">
+
+  <input type="text" name="name" placeholder="Your Name" required class="w-full border border-gray-300 p-3 rounded">
+  <input type="email" name="email" placeholder="Your Email" required class="w-full border border-gray-300 p-3 rounded">
+  <input type="tel" name="phone" placeholder="Phone Number" required class="w-full border border-gray-300 p-3 rounded">
+  <textarea name="message" rows="4" placeholder="Your Message" required class="w-full border border-gray-300 p-3 rounded"></textarea>
+  <button type="submit" class="bg-[#005EB8] text-white px-6 py-2 rounded hover:brightness-110">Send Message</button>
+</form>
+
+
+    <div class=" min-h-[500px] space-y-4 pt-2 ">
+      <h2 class="text-xl font-semibold text-[#005EB8]">Contact Details</h2>
+<p>
+  <strong>Address:</strong> Door No.60/17/A-5 Peter's Enclave,<br>
+  <span style="display: inline-block; margin-left: 75px;">
+     opp. Kairali Apartments
+     <br> Kochi, Kerala
+  </span>
+</p>
+     <div>
+ <p>
+  <strong class="inline-block w-20">Phone:</strong> +91 8129033332<br>
+  <span class="inline-block w-20"></span> +91 8589961888<br>
+  <span class="inline-block w-20"></span> +91 4842320046
+</p>
+<p>
+  <strong class="inline-block w-20">Email:</strong> info@evslogistics.in</p>
+</div>
+
+      <!-- <p><strong>Email:</strong> support@EVS.com</p> -->
+      <p><strong>Working Hours:</strong> Mon – Sat: 9:00 AM – 6:00 PM</p>
+      <div class="mt-4 w-full ">
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62875.909979236996!2d76.22069994863278!3d9.955213700000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0872c0fb8099df%3A0x117bf1724cadb899!2sKairali%20Apartments!5e0!3m2!1sen!2sin!4v1750152048212"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
+  </div>
+</main>
+
+
+<footer class="bg-[#005EB8] text-white">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">EVS</h2>
+      <p>We simplify cargo, import/export, and logistics operations worldwide with efficiency and care.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Options</h3>
+      <ul class="space-y-2">
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="index.html">Home</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Go to Home Page</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="about.html">About</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Learn About Us</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="services.html">Services</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">See What We Offer</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="contact.html">Contact</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Get in Touch</span>
+  </li>
+</ul>
+
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Our Services</h3>
+      <ul class="space-y-2">
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Customs Clearance
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Reliable Delivery</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Multimodal Transportation
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Global Trade Help</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Warehouse Handling
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Tax Refund Process</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Freight Forwarding
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Supply Chain Solutions
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Project Management
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Customs Consultation
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Relocation Services
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <!-- <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Dutyback Clearance
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li> -->
+</ul>
+
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Contact Info</h3>
+      <p>Door No.60/17/A-5 Peter's Enclave, <br>opp.Kairali Apartments<br>
+        Panampilly Nagar <br> Kochi , Kerala</p>
+      <p class="mt-2">
+  <span class="inline-block min-w-[45px] font-semibold">Phone:</span> +91 8129033332<br>
+  <span class="inline-block min-w-[45px]"></span> +91 8589961888<br>
+  <span class="inline-block min-w-[45px]"></span> + 484-232-0046
+</p>
+
+<p class="mt-2">
+  <span>Email: info@evslogistics.in</span><br>
+  <span style="display: inline-block; margin-left: 5ch;">Docs@evslogistics.in</span>
+</p>
+    </div>
+  </div>
+
+  <div class="border-t border-white mt-4 py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+    <p class="mb-2 md:mb-0">© 2025 EVS. All rights reserved.</p>
+    <p>Powered by <span class="font-semibold">N-ME </span></p>
+  </div>
+</footer>
+
+
+<a href="https://wa.me/918129033332" target="_blank" class="fixed bottom-4 right-4 z-50 mb-10">
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 258"
+    class="w-12 h-12 hover:scale-110 transition-transform duration-300">
+    <defs>
+      <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+        <stop offset="0%" stop-color="#1faf38" />
+        <stop offset="100%" stop-color="#60d669" />
+      </linearGradient>
+      <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+        <stop offset="0%" stop-color="#f9f9f9" />
+        <stop offset="100%" stop-color="#fff" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#logosWhatsappIcon0)"
+      d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+    <path fill="url(#logosWhatsappIcon1)"
+      d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+    <path fill="#fff"
+      d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+  </svg>
+</a>
+
+
+  <script src="./static/js/script.js"></script>
+   
+ 
+
+</body>
+</html>

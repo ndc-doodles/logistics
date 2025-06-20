@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <title>EVS</title>
+  <link rel="icon" type="image/png" href="/static/images/logo11.png" />
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./static/css/style.css">
+
+
+
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+     
+      fontFamily: {
+        rajdhani: ['"Rajdhani"', 'sans-serif'],
+      },
+        extend: {
+          colors: {
+            primary: '#005EB8',
+            accent: '#F0C479',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body {
+    overflow-x: hidden;
+}
+ .slide {
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+
+<body class="relative text-gray-900 font-sans">
+ 
+<div class="absolute inset-0 z-0">
+    <img 
+      src="./static/images/contactbg.jpg"
+      class="w-full h-full object-cover opacity-[0.03] max-md:hidden block" 
+      alt="Background"
+    />
+
+    <!-- <div class="block md:hidden w-full h-full bg-repeat opacity-15" 
+         style="background-image: url('./static/images/contactbg.jpg'); background-size: 400px 400px;">
+    </div> -->
+  </div>
+
+<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  <div class="w-full px-4 md:px-48 py-6 flex items-center">
+    
+<a href="index.html">
+  <img src="./static/images/logo1.png" alt="EVS Logo" class="h-12 w-auto">
+</a>
+<div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
+      <nav class="flex space-x-8">
+        <a href="index.html" class="hover:text-[#005EB8]">Home</a>
+        <a href="about.html" class="hover:text-[#005EB8]">About</a>
+        <a href="services.html" class="text-[#005EB8] font-semibold">Services</a>
+        <!-- <a href="contact.html" class="hover:text-[#005EB8]">Contact</a> -->
+      </nav>
+      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
+    </div>
+
+    <button class="md:hidden text-3xl ml-auto text-white" id="menuToggle">☰</button>
+  </div>
+
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+    <div class="p-6 space-y-8 mt-[4rem]">
+      <a href="index.html" class="block text-gray-800 hover:text-[#005EB8]">Home</a>
+      <a href="about.html" class="block text-gray-800 hover:text-[#005EB8]">About</a>
+      <a href="services.html" class="block text-[#005EB8] font-semibold">Services</a>
+      <!-- <a href="contact.html" class="block text-gray-800 hover:text-[#005EB8]">Contact</a> -->
+      <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
+    </div>
+  </div>
+</header>
+
+
+
+<div class="w-full min-h-[25rem] bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
+
+  <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('./static/images/service.jpg');"></div>
+
+  
+  <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold">Services</h1>
+    <p class="text-md md:text-md flex items-center gap-2">
+      <a href="/" class="hover:underline">Home</a>
+      <span>&rarr;</span>
+      <span>Services</span>
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<section class="relative z-10  py-16 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <div class="text-center">
+      <p class="text-[#031A4C] uppercase tracking-widest mb-2 inline-block">What We Offer</p>
+      <div class="w-20 h-[2px] bg-[#F0C479] mb-6 mx-auto"></div>
+    </div>
+
+    <h2 class="text-4xl font-semibold text-[#005EB8] mb-12">Our Services</h2>
+
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="bg-white rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/custom.jpg" alt="Custom Clearance" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Customs Clearance</h3>
+          <p class="text-gray-600 text-sm mb-4">We manage all customs procedures, ensuring fast and hassle-free import/export clearance at global borders.</p>
+          <button onclick="openModal('modal1')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/transportation.jpg" alt="Transportation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Multimodal Transportation</h3>
+          <p class="text-gray-600 text-sm mb-4">Efficient and secure inland transportation services to deliver cargo swiftly across domestic and cross-border locations.</p>
+          <button onclick="openModal('modal2')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/warehouse.jpg" alt="Warehouse Handling" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Warehouse Handling</h3>
+          <p class="text-gray-600 text-sm mb-4">We offer modern warehousing with inventory control, storage solutions, and safe handling for every shipment.</p>
+          <button onclick="openModal('modal3')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/freight.jpg" alt="Freight Forwarding" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Freight Forwarding</h3>
+          <p class="text-gray-600 text-sm mb-4">We coordinate complete freight solutions across land and sea, managing logistics, documents, and cargo flow.</p>
+          <button onclick="openModal('modal4')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+        </div>
+      </div>
+
+      <!-- <div class="bg-white rounded-lg overflow-hidden group">
+        <div class="overflow-hidden">
+          <img src="./static/images/cargo.jpg" alt="Air Cargo" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+        </div>
+        <div class="p-6 text-left">
+          <h3 class="text-lg font-semibold mb-2">Air Cargo</h3>
+          <p class="text-gray-600 text-sm mb-4">We provide fast, reliable air cargo solutions for urgent deliveries with full support and real-time tracking.</p>
+          <button onclick="openModal('modal5')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+        </div>
+      </div> -->
+
+      <div class="bg-white rounded-lg overflow-hidden group">
+    <div class="overflow-hidden">
+      <img src="./static/images/chain.jpg" alt="Supply Chain" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+    </div>
+    <div class="p-6 text-left">
+      <h3 class="text-lg font-semibold mb-2">Supply Chain Solutions</h3>
+<p class="text-gray-600 text-sm mb-4">
+  Streamline logistics with our flexible, end-to-end supply chain solutions tailored to meet your business needs.
+</p>
+      <button onclick="openModal('modal6')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+    </div>
+  </div>
+
+  <!-- Project Management -->
+  <div class="bg-white rounded-lg overflow-hidden group">
+    <div class="overflow-hidden">
+      <img src="./static/images/project.jpg" alt="Project Management" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+    </div>
+    <div class="p-6 text-left">
+      <h3 class="text-lg font-semibold mb-2">Project Management</h3>
+      <p class="text-gray-600 text-sm mb-4">From planning to execution, we manage logistics projects of any scale with precision, safety, and timely delivery.</p>
+      <button onclick="openModal('modal7')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+    </div>
+  </div>
+
+  <!-- Consulting -->
+ <div class="bg-white rounded-lg overflow-hidden group">
+  <div class="overflow-hidden">
+    <img src="./static/images/consulting.jpg" alt="Custom Consultation" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+  </div>
+  <div class="p-6 text-left">
+    <h3 class="text-lg font-semibold mb-2">Customs Consultation</h3>
+    <p class="text-gray-600 text-sm mb-4">
+  Tailored logistics advice to solve your unique challenges, streamline operations and enhance efficiency.
+</p>
+
+    <button onclick="openModal('modal8')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+  </div>
+</div>
+
+
+  <!-- Relocation Services -->
+  <div class="bg-white rounded-lg overflow-hidden group">
+    <div class="overflow-hidden">
+      <img src="./static/images/relocation.jpg" alt="Relocation Services" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+    </div>
+    <div class="p-6 text-left">
+      <h3 class="text-lg font-semibold mb-2">Relocation Services</h3>
+      <p class="text-gray-600 text-sm mb-4">We provide hassle-free domestic and international relocation with secure packing, transport, and delivery.</p>
+      <button onclick="openModal('modal9')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+    </div>
+  </div>
+
+
+<div class="bg-white rounded-lg overflow-hidden group">
+  <div class="overflow-hidden">
+    <img src="./static/images/duty.jpg" alt="Duty drawback clearance" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300">
+  </div>
+  <div class="p-6 text-left">
+    <h3 class="text-lg font-semibold mb-2">Duty drawback clearance</h3>
+    <p class="text-gray-600 text-sm mb-4">We handle Duty drawback clearance efficiently—managing refund processes for previously paid duties on qualified exports.</p>
+    <button onclick="openModal('modal10')" class="btn-readmore hover-slide-left bg-accent text-white px-4 py-2 rounded hover:brightness-110">Read More</button>
+  </div>
+</div>
+
+
+
+
+
+    </div>
+
+
+
+  </div>
+  </div>
+
+  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Customs Clearance</h2>
+      <p class="text-gray-700 text-sm mb-4">We simplify customs procedures and manage documentation to clear your cargo smoothly through borders.</p>
+      <button onclick="closeModal('modal1')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Multimodal Transportation</h2>
+      <p class="text-gray-700 text-sm mb-4">From road to rail, our transportation services guarantee timely and secure movement of your cargo.</p>
+      <button onclick="closeModal('modal2')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Warehouse Handling</h2>
+      <p class="text-gray-700 text-sm mb-4">We provide storage solutions with real-time tracking, inventory management, and flexible space options.</p>
+      <button onclick="closeModal('modal3')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Freight Forwarding</h2>
+      <p class="text-gray-700 text-sm mb-4">Comprehensive logistics planning and coordination for import/export shipments across sea and land.</p>
+      <button onclick="closeModal('modal4')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+
+  <div id="modal5" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-4">Air Cargo</h2>
+      <p class="text-gray-700 text-sm mb-4">Quick and reliable air cargo shipping with end-to-end service, including customs and last-mile delivery.</p>
+      <button onclick="closeModal('modal5')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+    </div>
+  </div>
+  <!-- Modal: Supply Chain Solutions -->
+<div id="modal6" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">Supply Chain Solutions</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      We offer end-to-end supply chain solutions that optimize procurement, warehousing, distribution, and inventory management — designed to improve efficiency and reduce operational costs.
+    </p>
+    <button onclick="closeModal('modal6')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+  </div>
+</div>
+
+<!-- Modal: Project Management -->
+<div id="modal7" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">Project Management</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      Our expert team ensures the successful execution of logistics projects through effective planning, coordination, and resource management — from initial concept to final delivery.
+    </p>
+    <button onclick="closeModal('modal7')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+  </div>
+</div>
+
+<!-- Modal: Consulting -->
+<div id="modal8" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">CustomS Consultation</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      Our custom consultation services are crafted to suit your logistics goals. From analyzing workflows to creating smart strategies, we provide expert advice to help you reduce costs, improve operations, and scale confidently.
+    </p>
+    <button onclick="closeModal('modal8')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+  </div>
+</div>
+
+
+<!-- Modal: Relocation Services -->
+<div id="modal9" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">Relocation Services</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      We manage complete relocation logistics for individuals and businesses — including packing, secure transport, customs clearance, and doorstep delivery — with minimal disruption.
+    </p>
+    <button onclick="closeModal('modal9')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+  </div>
+</div>
+
+
+
+<div id="modal10" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white p-8 rounded w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-4">Duty drawback clearance</h2>
+    <p class="text-gray-700 text-sm mb-4">
+      We handle Duty drawback clearance services with precision—ensuring accurate documentation, smooth processing, and timely refunds of duties paid on imported goods as per applicable policies.
+    </p>
+    <button onclick="closeModal('modal10')" class="mt-4 bg-[#005EB8] text-white px-4 py-2 rounded">Close</button>
+  </div>
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-[#005EB8] text-white">
+  <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-4 gap-8 gap-y-6 text-sm" style="line-height: 2rem;">
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">EVS</h2>
+      <p>We simplify cargo, import/export, and logistics operations worldwide with efficiency and care.</p>
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Options</h3>
+      <ul class="space-y-2">
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="index.html">Home</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Go to Home Page</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="about.html">About</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Learn About Us</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="services.html">Services</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">See What We Offer</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i><a href="contact.html">Contact</a>
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Get in Touch</span>
+  </li>
+</ul>
+
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Our Services</h3>
+      <ul class="space-y-2">
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Customs Clearance
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Reliable Delivery</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Multimodal Transportation
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Global Trade Help</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Warehouse Handling
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Tax Refund Process</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Freight Forwarding
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Supply Chain Solutions
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Project Management
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Customs Consultation
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Relocation Services
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li>
+  <!-- <li class="relative group">
+    <i class="fas fa-angle-right mr-2"></i>Dutyback Clearance
+    <span class="absolute left-6 -top-6 opacity-0 group-hover:opacity-100 transition-opacity bg-white text-[#005EB8] text-xs px-2 py-1 rounded shadow-md z-10">Your Goods Secured</span>
+  </li> -->
+</ul>
+
+    </div>
+
+    <div>
+      <h3 class="font-semibold text-lg mb-3">Contact Info</h3>
+      <p>Door No.60/17/A-5 Peter's Enclave, <br>opp.Kairali Apartments<br>
+        Panampilly Nagar <br> Kochi , Kerala</p>
+      <p class="mt-2">
+  <span class="inline-block min-w-[45px] font-semibold">Phone:</span> +91 8129033332<br>
+  <span class="inline-block min-w-[45px]"></span> +91 8589961888<br>
+  <span class="inline-block min-w-[45px]"></span> + 484-232-0046
+</p>
+
+<p class="mt-2">
+  <span>Email: info@evslogistics.in</span><br>
+  <span style="display: inline-block; margin-left: 5ch;">Docs@evslogistics.in</span>
+</p>
+    </div>
+  </div>
+
+  <div class="border-t border-white mt-4 py-4 text-sm flex flex-col md:flex-row justify-between items-center px-6">
+    <p class="mb-2 md:mb-0">© 2025 EVS. All rights reserved.</p>
+    <p>Powered by <span class="font-semibold">N-ME </span></p>
+  </div>
+</footer>
+
+
+<a href="https://wa.me/918129033332" target="_blank" class="fixed bottom-4 right-4 z-50 mb-10">
+  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 258"
+    class="w-12 h-12 hover:scale-110 transition-transform duration-300">
+    <defs>
+      <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+        <stop offset="0%" stop-color="#1faf38" />
+        <stop offset="100%" stop-color="#60d669" />
+      </linearGradient>
+      <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+        <stop offset="0%" stop-color="#f9f9f9" />
+        <stop offset="100%" stop-color="#fff" />
+      </linearGradient>
+    </defs>
+    <path fill="url(#logosWhatsappIcon0)"
+      d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004" />
+    <path fill="url(#logosWhatsappIcon1)"
+      d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z" />
+    <path fill="#fff"
+      d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
+  </svg>
+</a>
+
+   
+ 
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.getElementById(id).classList.add('flex');
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+    document.getElementById(id).classList.remove('flex');
+  }
+</script>
+
+
+
+
+  <script src="./static/js/script.js"></script>
+</body>
+</html>

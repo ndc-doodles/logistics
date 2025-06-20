@@ -1,0 +1,136 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* 
+body {
+  font-family: 'Space Grotesk', sans-serif;
+} */
+
+/* Apply Rajdhani to all elements by default */
+body {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* Apply Poppins only to <p> elements */
+p {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 
+.btn-readmore {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background-image: linear-gradient(315deg, #F0C479 0%, #F0C479 74%);
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn-readmore::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow:
+    -7px -7px 20px 0px #fff9,
+    -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002,
+    4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.btn-readmore:hover::after {
+  top: 0;
+  height: 100%;
+}
+
+.btn-readmore:hover {
+  color: white;
+  transform: scale(1.05);
+} */
+
+  #scrollContainer {
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  }
+
+  #scrollContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+
+
+  .zoom-in {
+    animation: zoomIn 5s ease forwards;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideLeft 1s ease-out forwards;
+  }
+
+  .slide-in-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideBottom 1s ease-out forwards;
+  }
+
+  @keyframes slideLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideBottom {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .clip-polygon-right {
+  clip-path: polygon(0 0, 93% 0, 100% 50%, 93% 100%, 0 100%);
+}
+
+.clip-polygon-left {
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 7% 100%, 0 50%);
+}
+.slide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+    position: absolute;
+    inset: 0;
+  }
+
+  .slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
