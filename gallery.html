@@ -129,7 +129,12 @@
 
   <div id="imageViewer" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 px-6">
     <div class="relative max-w-4xl w-full mx-auto">
-      <img id="mainImage" src="" alt="Full View" class="w-full h-[500px] object-cover rounded-lg shadow" />
+<img 
+  id="mainImage" 
+  src="" 
+  alt="Full View" 
+  class="w-full h-[500px] object-contain rounded-lg shadow"
+/>
 
        <button onclick="changeImage(-1)" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
