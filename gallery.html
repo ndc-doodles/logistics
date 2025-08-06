@@ -50,20 +50,21 @@
   </style>
 </head>
 
-
-<body class="relative text-gray-900 font-sans">
- 
+<body>
+    <div class="absolute inset-0 z-0 h-full w-full">
+    <div class="relative h-[500px]">
   <div class="absolute inset-0 z-0">
     <img 
       src="./static/images/contactbg.jpg"
-      class="w-full h-full object-cover opacity-[0.03] max-md:hidden block " 
-      alt="Background"/>
-
-   
+      class="w-full h-full object-cover opacity-[0.03] block"
+      alt="Background"
+    />
   </div>
+</div>
 
-
-<header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
+  </div>
+    <div class="relative z-10">
+    <header  id="mainHeader" class="bg-transparent shadow-sm sticky top-0 z-50 w-full" style="position: fixed;">
   <div class="w-full px-4 md:px-48 py-6 flex items-center">
     
 <a href="index.html">
@@ -72,9 +73,9 @@
 <div class="hidden md:flex items-center space-x-8 font-medium ml-auto nav-wrapper text-white">
       <nav class="flex space-x-8">
         <a href="index.html" class="hover:text-[#005EB8]">Home</a>
-        <a href="about.html" class="text-[#005EB8] font-semibold">About</a>
+        <a href="about.html" class="hover:text-[#005EB8]">About</a>
         <a href="services.html" class="hover:text-[#005EB8]">Services</a>
-        <a href="gallery.html" class="hover:text-primary">Gallery</a>
+        <a href="gallery.html" class="text-[#005EB8] font-semibold">Gallery</a>
       </nav>
       <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded hover:brightness-110 transition">Contact Now</a>
     </div>
@@ -85,140 +86,71 @@
   <div id="mobileMenu" class="fixed top-0 right-0 h-full w-3/4 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
     <div class="p-6 space-y-8 mt-[4rem]">
       <a href="index.html" class="block text-gray-800 hover:text-[#005EB8]">Home</a>
-      <a href="about.html" class="block text-[#005EB8] font-semibold">About</a>
-      <a href="services.html" class="block text-gray-800 hover:text-[#005EB8]">Services</a>
-      <a href="gallery.html" class="block text-gray-800 hover:text-primary">Gallery</a>
+      <a href="about.html" class="block text-gray-800 hover:text-[#005EB8]">About</a>
+      <a href="services.html" class="block text-gray-800 hover:text-[#005EB8">Services</a>
+      <a href="gallery.html" class="block text-[#005EB8] font-semibold">Gallery</a>
       <a href="contact.html" class="block bg-accent text-white text-center py-2 rounded hover:brightness-110">Contact Now</a>
     </div>
   </div>
 </header>
-
 <div class="w-full min-h-[25rem] h-full bg-black relative text-white px-[9.5rem] max-md:px-6 flex flex-col justify-center">
 
   <div class="absolute inset-0 bg-cover bg-center opacity-70  " style="background-image: url('./static/images/about.jpeg');"></div>
 
   <div class="relative z-10 flex flex-col items-center justify-center h-full space-y-2 text-center ">
-    <h1 class="text-3xl md:text-4xl font-semibold">About Us</h1>
+    <h1 class="text-3xl md:text-4xl font-semibold">Gallery</h1>
     <p class="text-md md:text-md flex items-center gap-2">
       <a href="/" class="hover:underline">Home</a>
       <span>&rarr;</span>
-      <span>About</span>
+      <span>Gallery</span>
     </p>
   </div>
 
 </div>
 
 
+<div class="flex flex-col items-center text-center mt-20">
+  <h1 class="text-[#031A4C] uppercase tracking-widest mb-2">Our Gallery</h1>
+  <div class="w-20 h-[0.1rem] bg-[#F0C479] mb-6"></div>
+  <h2 class="text-3xl text-[#005EB8] mb-4 font-semibold">Discover Moments from Our Logistics Journey</h2>
+</div>
 
 
-
-
-
-<section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center mt-10 reveal-container">
-  <div class="reveal-left translate-x-[-100px] transition-all duration-1000">
-    <img src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Logistics Image" class=" w-full h-auto object-cover">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-10 px-[130px] max-md:px-[16px] mb-10">
+    <img src="./static/images/gallery1.jpg" onclick="openViewer(0)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery2.jpg" onclick="openViewer(1)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery3.jpg" onclick="openViewer(2)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery4.jpg" onclick="openViewer(3)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery5.jpg" onclick="openViewer(4)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery6.jpg" onclick="openViewer(5)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery7.jpg" onclick="openViewer(6)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
+    <img src="./static/images/gallery8.jpg" onclick="openViewer(7)" class="w-full h-60 object-cover rounded-lg cursor-pointer shadow" />
   </div>
 
-  <div class="reveal-right translate-x-[100px] transition-all duration-1000">
-<h1 class="text-[#031A4C] uppercase tracking-widest mb-2">About Us</h1>
-<div class="w-20 h-[0.1rem] bg-[#F0C479] mb-6"></div>
-    <h2 class="text-3xl text-[#005EB8] mb-4 font-semibold">About Our Logistics Company</h2>
-    <p class="text-gray-700 leading-relaxed">
-      At <strong>EVS</strong>, we specialize in providing efficient and reliable transportation, cargo handling, import/export solutions and customs support. 
-      With years of experience in the logistics industry, our goal is to simplify global shipping, whether it's FMCG, garments, spices or machinery.
-    </p>
-    <p class="text-gray-700 mt-4">
-      Our team ensures timely delivery, safe cargo management and personalized support, helping you move goods locally and globally with confidence.
-    </p>
-  </div>
-</section>
-<section class=" pb-8 px-6 max-md:px-0 mt-20 mb-20 max-md:mt-0 max-md:mb-0 ">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center px-6 ">
-    
-    <div>
-      <h2 class="text-3xl font-semibold text-[#005EB8] mb-4">#1 Place To Manage All Of Your Shipments</h2>
-      <p class="text-gray-700 mb-6">
-        Your trusted partner for cargo transport, import-export, refunds and insurance - delivering garments, spices, FMCG and machinery with care and expertise.
-      </p>
-      <div class="text-lg text-[#031A4C] font-medium">
-        Call for any query! <br>
-<p class="mt-2">
-  <span class="inline-block min-w-[45px] font-semibold">Phone:</span> +91 8589961888<br>
-  <span class="inline-block min-w-[45px] pl-16"></span>   +91 8129033332
-</p>      </div>
-    </div>
+  <div id="imageViewer" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50 px-6">
+    <div class="relative max-w-4xl w-full mx-auto">
+      <img id="mainImage" src="" alt="Full View" class="w-full h-[500px] object-cover rounded-lg shadow" />
 
-   <div class="grid grid-cols-2 gap-6 relative">
-  <!-- Left Column -->
-  <div class="flex flex-col space-y-6">
+       <button onclick="changeImage(-1)" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <path fill="#3b3a3a" fill-rule="evenodd" d="m10.707 12.707l-4-4l4-4l.707.707L8.121 8l3.293 3.293z" />
+        </svg>
+      </button>
 
-    <div class="bg-[#005EB8] text-white p-6 rounded-lg text-center shadow">
-      <h3 class="text-2xl font-bold">Reliable Delivery</h3>
-      <p class="text-sm mt-2">On-time & secure shipments</p>
-    </div>
+      <button onclick="changeImage(1)" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow hover:bg-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+          <path fill="none" stroke="#3b3a3a" d="M6 4.5L9.5 8L6 11.5" stroke-width="1" />
+        </svg>
+      </button>
 
-    <div class="bg-accent text-white p-6 rounded-lg text-center shadow">
-      <h3 class="text-2xl font-bold">Warehouse Handling</h3>
-      <p class="text-sm mt-2">Safe storage & inventory care</p>
-    </div>
-
-  </div>
-
-  <!-- Right Column -->
-  <div class="flex items-center justify-center">
-    <div class="bg-[#005EB8] text-white p-6 rounded-lg text-center shadow">
-      <h3 class="text-2xl font-bold">Expert Support</h3>
-      <p class="text-sm mt-2">Personalized customer service</p>
+      <button onclick="closeViewer()" class="absolute top-4 right-4 bg-white text-black px-3 py-1 rounded-full hover:bg-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path fill="#646464" d="M6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z" />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
-
-  </div>
-</section>
-
-<section class="bg-[#005EB8]/10 py-16 px-6 reveal-container">
-  <div class="max-w-7xl mx-auto text-center reveal-up opacity-0 translate-y-24 transition-all duration-1000">
-    <h2 class="text-3xl font-semibold text-[#005EB8] mb-4">Why Choose Us</h2>
-    <p class="text-black/60 mb-10 max-w-2xl mx-auto">
-      We stand out in the logistics sector by offering unmatched service, experience and commitment to customer satisfaction.
-    </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">Smart Logistics Planning</h3>
-        <p class="text-gray-600">Efficient routes and timing for faster, smoother deliveries..</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">End-to-End Solutions</h3>
-        <p class="text-gray-600">From documentation to delivery, we cover cargo, import/export and customs clearance.</p>
-      </div>
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2 text-[#005EB8]">Secure Cargo Handling</h3>
-        <p class="text-gray-600">Your goods are insured and managed with industry-standard safety protocols.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <footer class="bg-[#005EB8] text-white">
@@ -344,39 +276,41 @@
       d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64" />
   </svg>
 </a>
-
-  <script src="./static/js/script.js"></script>
-   
- 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll('.reveal-container');
+  const propertyImages = [
+    './static/images/gallery1.jpg',
+    './static/images/gallery2.jpg',
+    './static/images/gallery3.jpg',
+    './static/images/gallery4.jpg',
+    './static/images/gallery5.jpg',
+    './static/images/gallery6.jpg',
+    './static/images/gallery7.jpg',
+    './static/images/gallery8.jpg',
+  ];
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const directions = [
-            { class: 'reveal-left', remove: ['opacity-0', '-translate-x-24'], add: ['opacity-100', 'translate-x-0'] },
-            { class: 'reveal-right', remove: ['opacity-0', 'translate-x-24'], add: ['opacity-100', 'translate-x-0'] },
-            { class: 'reveal-up', remove: ['opacity-0', 'translate-y-24'], add: ['opacity-100', 'translate-y-0'] },
-            { class: 'reveal-down', remove: ['opacity-0', '-translate-y-24'], add: ['opacity-100', 'translate-y-0'] },
-          ];
+  let currentIndex = 0;
 
-          directions.forEach(dir => {
-            const el = entry.target.querySelector(`.${dir.class}`);
-            if (el) {
-              el.classList.remove(...dir.remove);
-              el.classList.add(...dir.add);
-            }
-          });
+  function openViewer(index) {
+    currentIndex = index;
+    document.getElementById('mainImage').src = propertyImages[currentIndex];
+    const viewer = document.getElementById('imageViewer');
+    viewer.classList.remove('hidden');
+    viewer.classList.add('flex');
+  }
 
-          observer.unobserve(entry.target); // Optional
-        }
-      });
-    }, { threshold: 0.3 });
+  function closeViewer() {
+    const viewer = document.getElementById('imageViewer');
+    viewer.classList.add('hidden');
+    viewer.classList.remove('flex');
+  }
 
-    sections.forEach(section => observer.observe(section));
-  });
+  function changeImage(direction) {
+    currentIndex = (currentIndex + direction + propertyImages.length) % propertyImages.length;
+    document.getElementById('mainImage').src = propertyImages[currentIndex];
+  }
 </script>
+<script src="./static/js/script.js"></script>
+
+
 </body>
 </html>
